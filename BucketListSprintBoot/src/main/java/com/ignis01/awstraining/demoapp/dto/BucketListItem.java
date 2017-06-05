@@ -8,7 +8,7 @@ import java.util.Date;
  * Created by ydong05 on 27/05/2017.
  */
 public class BucketListItem {
-    long itemId;
+    int itemId;
     String title;
     String description;
     boolean accomplished;
@@ -16,11 +16,11 @@ public class BucketListItem {
     @JsonFormat(pattern="yyyy-MM-dd")
     Date accomplishedDate;
 
-    public long getItemId() {
+    public int getItemId() {
         return itemId;
     }
 
-    public void setItemId(long itemId) {
+    public void setItemId(int itemId) {
         this.itemId = itemId;
     }
 

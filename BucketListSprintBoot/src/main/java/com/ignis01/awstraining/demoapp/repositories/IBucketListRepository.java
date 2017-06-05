@@ -9,8 +9,8 @@ import java.util.List;
  */
 public interface IBucketListRepository {
     public List<BucketListItem> getBucketList();
-    public BucketListItem getBucketListItem(long id);
+    public BucketListItem getBucketListItem(int id);
     public void updateBucketListItem(BucketListItem item);
     public BucketListItem addBucketListItem(BucketListItem item);
-    public void deleteBucketListItem(long id);
+    public void deleteBucketListItem(int id);
 }

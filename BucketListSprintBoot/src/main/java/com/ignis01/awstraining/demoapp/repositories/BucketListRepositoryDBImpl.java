@@ -14,7 +14,7 @@ public class BucketListRepositoryDBImpl implements IBucketListRepository {
     }
 
     @Override
-    public BucketListItem getBucketListItem(long id) {
+    public BucketListItem getBucketListItem(int id) {
         return null;
     }
 
@@ -29,7 +29,7 @@ public class BucketListRepositoryDBImpl implements IBucketListRepository {
     }
 
     @Override
-    public void deleteBucketListItem(long id) {
+    public void deleteBucketListItem(int id) {
 
     }
 }
