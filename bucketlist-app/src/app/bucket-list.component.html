@@ -1,0 +1,31 @@
+<div>
+  <table class="bucketList">
+    <tr *ngFor="let listItem of bucketList; let i=index"
+      [class.selected]="listItem===item"
+        (click)="onSelect(listItem)"
+    >
+      <td class="idCell">{{i+1}}</td>
+      <td class="title">{{listItem.title}}<!-- -{{listItem.itemId}}--></td>
+      <td class="accomplished">{{listItem.accomplished?'Done':'Not'}}</td>
+      <td><button class="delete" (click)="delete(listItem);$event.stopPropagation()">x</button>
+     </td>
+    </tr>
+  </table>
+</div>
+<div>
+  <form action="">
+    <div>Add New Destination</div>
+    <table>
+      <tr><td class="label"><label>Title</label></td><td><input #title></td></tr>
+      <tr><td class="label"><label>Location</label></td><td><input #description></td></tr>
+    </table>
+  </form>
+    <button (click)="add(title.value, description.value);title.value='';description.value=''">Add</button>
+</div>
+<!--<item-detail [item]="item"></item-detail>-->
+<div *ngIf="item">
+  <h2>
+    {{item.title | uppercase}} is on my destination list
+  </h2>
+  <button (click)="gotoDetail()">View Details</button>
+</div>

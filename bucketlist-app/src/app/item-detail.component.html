@@ -1,0 +1,25 @@
+<div *ngIf="item">
+    <h2>{{item.title}} </h2>
+  <form action="">
+    <table>
+      <!--<tr><td class="label"><label>Item ID</label></td><td>{{item.itemId}}</td></tr>-->
+      <tr><td class="label"><label>Location</label></td><td><input [(ngModel)]="item.description" name="description"></td></tr>
+      <tr>
+        <td class="label"><label>Visited</label></td><!--{{item.accomplished}}-->
+        <td>
+          <input type="radio" ng-control="accomplished" [(ngModel)]="item.accomplished" name="accomplished"
+                 [value]="true">Yes
+          <input type="radio" ng-control="accomplished" [(ngModel)]="item.accomplished" name="accomplished"
+                 [value]="false">No
+        </td>
+      </tr>
+      <tr>
+        <td  class="label"><label>Visit Date</label></td>
+        <td>
+          <input [(ngModel)]="item.accomplishedDate" name="accomplishedDate">
+        </td>
+      </tr>
+    </table>
+  </form>
+  <span><button (click)="goBack()">Back</button></span>&nbsp;<span><button (click)="save()">Save</button></span>
+</div>
